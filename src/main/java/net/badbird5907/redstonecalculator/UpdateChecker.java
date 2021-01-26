@@ -11,16 +11,18 @@ public class UpdateChecker {
     public static String updateCheck(){
         try {
             String githubversion = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/version.txt");
+            System.out.println("Github version: " + githubversion);
+            return githubversion;
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
-        return null;
     }
-    public static String updateLog(){
+    public static String changeLog(){
         try {
-            String updatelog = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/updatelog.txt");
-            return updatelog;
+            String changelog = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/changelog.txt").split("-").toString();
+            System.out.println("Changelog: " + changelog);
+            return changelog;
         } catch (IOException e) {
             e.printStackTrace();
         }

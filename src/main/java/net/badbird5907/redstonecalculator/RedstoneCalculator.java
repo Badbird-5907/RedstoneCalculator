@@ -34,12 +34,14 @@ public class RedstoneCalculator implements ActionListener {
     }
     public static void main(String[] args) {
         System.out.println("Starting");
-        if(!UpdateChecker.updateCheck().equalsIgnoreCase(version)){
-            System.out.println("Update avaliable!");
-            JOptionPane.showMessageDialog(null, "Update Avaliable!\nChangelog: " + UpdateChecker.updateLog() + "\n download at: https://github.com/Badbird-5907/RedstoneCalculator/releases");
-        }
         Type.init();
         new RedstoneCalculator();
+        String ghversion = UpdateChecker.updateCheck();
+        if(!ghversion.equalsIgnoreCase(version)){
+            System.out.println("Update avaliable!");
+            JOptionPane.showMessageDialog(null, "Update Avaliable! Version:" + ghversion +" \nChangelog: " + UpdateChecker.changeLog() + "\ndownload at: https://badbird5907.xyz/calculator");
+        }
+        else System.out.println("Up to date!");
     }
     public void actionPerformed(ActionEvent e){
         String s = e.getActionCommand();
