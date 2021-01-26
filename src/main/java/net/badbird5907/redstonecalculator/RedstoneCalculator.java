@@ -34,6 +34,9 @@ public class RedstoneCalculator implements ActionListener {
     }
     public static void main(String[] args) {
         System.out.println("Starting");
+        if(UpdateChecker.updateCheck()){
+            System.out.println("Update avaliable!");
+        }
         Type.init();
         new RedstoneCalculator();
     }

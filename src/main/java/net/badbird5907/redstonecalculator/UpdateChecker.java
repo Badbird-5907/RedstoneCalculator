@@ -8,10 +8,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class UpdateChecker {
-    public static boolean updateCheck(){
-        
+    public static String updateCheck(){
+        try {
+            String githubversion = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/version.txt");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return null;
     }
-    String getText(String url) throws IOException {
+    private static String getText(String url) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
         //add headers to the connection, or check the status if desired..
 
