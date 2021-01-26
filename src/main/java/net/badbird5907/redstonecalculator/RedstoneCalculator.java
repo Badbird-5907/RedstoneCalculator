@@ -6,7 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RedstoneCalculator implements ActionListener {
-    public static String version = "1";
+    //TODO remember to change version every time
+    public static String version = "1.1";
     JTextField input;
     JComboBox<String> comboBox;
     public RedstoneCalculator(){
@@ -50,7 +51,7 @@ public class RedstoneCalculator implements ActionListener {
             String b = comboBox.getSelectedItem().toString();
             System.out.println(i);
             System.out.println(b);
-            Calculate.process(i, b);
+            Calculate.process(i.replace("Amount", ""), b);
         }
     }
 
