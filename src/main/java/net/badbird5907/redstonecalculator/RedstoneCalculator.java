@@ -34,8 +34,9 @@ public class RedstoneCalculator implements ActionListener {
     }
     public static void main(String[] args) {
         System.out.println("Starting");
-        if(UpdateChecker.updateCheck()){
+        if(!UpdateChecker.updateCheck().equalsIgnoreCase(version)){
             System.out.println("Update avaliable!");
+            JOptionPane.showMessageDialog(null, "Update Avaliable!\nChangelog: " + UpdateChecker.updateLog() + "\n download at: https://github.com/Badbird-5907/RedstoneCalculator/releases");
         }
         Type.init();
         new RedstoneCalculator();

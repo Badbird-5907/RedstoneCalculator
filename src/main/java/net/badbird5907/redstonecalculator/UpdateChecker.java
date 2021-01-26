@@ -11,12 +11,21 @@ public class UpdateChecker {
     public static String updateCheck(){
         try {
             String githubversion = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/version.txt");
-
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
         return null;
+    }
+    public static String updateLog(){
+        try {
+            String updatelog = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/updatelog.txt");
+            return updatelog;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+
     }
     private static String getText(String url) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
