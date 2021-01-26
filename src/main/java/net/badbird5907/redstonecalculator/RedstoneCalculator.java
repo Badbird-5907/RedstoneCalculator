@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class RedstoneCalculator implements ActionListener {
+    public static String version = "1";
     JTextField input;
     JComboBox<String> comboBox;
     public RedstoneCalculator(){
