@@ -1,0 +1,3 @@
+Version: 1.1\n
+Added:\n
+Update checker\n
