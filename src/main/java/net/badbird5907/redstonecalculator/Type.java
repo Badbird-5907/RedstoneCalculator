@@ -8,6 +8,9 @@ public class Type {
     public static ArrayList<HashMap<Integer, String>> OBSERVER = new ArrayList<>();
     public static ArrayList<HashMap<Integer, String>> HOPPER = new ArrayList<>();
     public static ArrayList<HashMap<Integer, String>> MINECART = new ArrayList<>();
+    public static ArrayList<HashMap<Integer, String>> STICKS = new ArrayList<>();
+    public static ArrayList<HashMap<Integer, String>> RAILS = new ArrayList<>();
+
     public static void init(){
         //repeater
         HashMap<Integer, String> repeaterstone = new HashMap();
@@ -45,5 +48,16 @@ public class Type {
         HashMap<Integer, String> minecartiron = new HashMap();
         minecartiron.put(5, "Iron");
         MINECART.add(minecartiron);
+        //rails
+        HashMap<Integer, String> railsiron = new HashMap<>();
+        HashMap<Integer, String> railsstick = new HashMap<>();
+        railsiron.put(6,"Iron");
+        railsstick.put(1,"Stick");
+        RAILS.add(railsiron);
+        RAILS.add(railsstick);
+        //sticks
+        HashMap<Integer,String> sticks = new HashMap<>();
+        sticks.put(2,"Wood Planks");
+        STICKS.add(sticks);
     }
 }

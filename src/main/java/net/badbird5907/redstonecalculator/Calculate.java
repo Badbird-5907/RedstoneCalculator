@@ -44,6 +44,20 @@ public class Calculate {
                     });
                 }
             }
+            if(type.equalsIgnoreCase("stick")){
+                for (HashMap<Integer, String> a : Type.STICKS) {
+                    a.forEach((k,v) ->{
+                        recipe.put(k*amount,v);
+                    });
+                }
+            }
+            if(type.equalsIgnoreCase("rails")){
+                for (HashMap<Integer, String> a : Type.RAILS) {
+                    a.forEach((k,v) ->{
+                        recipe.put(k*amount,v);
+                    });
+                }
+            }
             StringBuilder builder = new StringBuilder();
             builder.append("Recipe for " + amount + " of " + type);
             recipe.forEach((k,v)->{

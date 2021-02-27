@@ -16,7 +16,7 @@ public class RedstoneCalculator implements ActionListener {
         input = new JTextField(16);
         input.setText("Amount");
         JButton button = new JButton("submit");
-        String[] choices = {"Repeater", "Observer", "Hopper", "Minecart"};
+        String[] choices = {"Repeater", "Observer", "Hopper", "Minecart","Stick","Rails"};
         comboBox = new JComboBox<>(choices);
         comboBox.setMaximumSize(comboBox.preferredSize());
         comboBox.setAlignmentX(Component.CENTER_ALIGNMENT);
