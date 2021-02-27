@@ -42,7 +42,6 @@ public class ErrorMessage extends RuntimeException implements ActionListener {
         System.out.println(s);
         if(s.equals("Close")){
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-
         }
     }
 }
