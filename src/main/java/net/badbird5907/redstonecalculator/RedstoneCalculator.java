@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class RedstoneCalculator implements ActionListener {
     //TODO remember to change version every time
-    public static String version = "2.0";
+    public static String version = "2.1";
     JTextField input;
     JComboBox<String> comboBox;
     public RedstoneCalculator(){
@@ -52,7 +52,7 @@ public class RedstoneCalculator implements ActionListener {
         String ghversion = UpdateChecker.updateCheck();
         if(!ghversion.equalsIgnoreCase(version)){
             System.out.println("Update avaliable!");
-            JOptionPane.showMessageDialog(null, "Update Avaliable! Version:" + ghversion +" \nChangelog: " + UpdateChecker.changeLog() + "\ndownload at: https://badbird5907.xyz/calculator");
+            JOptionPane.showMessageDialog(null, "Update Avaliable! Version:" + ghversion +" \nChangelog: " + UpdateChecker.changeLog().replace("\\n", "\n") + "\ndownload at: https://badbird5907.xyz/calculator");
         }
         else System.out.println("Up to date!");
     }

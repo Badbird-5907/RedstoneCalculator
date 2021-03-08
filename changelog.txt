@@ -1,3 +1,6 @@
-Version: 1.1\n
+Version: 2.0\n
 Added:\n
-Update checker\n
+Stick and rail recipe\n
+Also fixed changelog\n
+Coming soon:\n
+Gui overhaul\n

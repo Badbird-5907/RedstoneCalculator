@@ -22,7 +22,7 @@ public class UpdateChecker {
         try {
             String changelog = getText("https://raw.githubusercontent.com/Badbird-5907/RedstoneCalculator/master/changelog.txt");
             System.out.println("Changelog: " + changelog);
-            return changelog;
+            return changelog.replaceAll("\\n","\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
