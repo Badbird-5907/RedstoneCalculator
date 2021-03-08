@@ -32,5 +32,14 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.pushing-pixels</groupId>
+            <artifactId>radiance-neon</artifactId>
+            <version>3.5.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/radiance-neon-3.5.1.jar</systemPath>
+        </dependency>
+    </dependencies>
 
 </project>
